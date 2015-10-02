@@ -1,0 +1,26 @@
+import json
+import sys
+
+def buildjson (a):
+	File = open ( a , 'r')
+	file = File.read()
+    # print file + 'eof\n'
+	jsonObject = json.loads(file)
+    	File.close() ;
+	return jsonObject
+
+def buildTree (a):
+    jsonObject = buildjson(a)
+    tree = {}
+    entries = jsonObject['log']['entries']
+    for i in entries:
+        curr = i['request']['url']
+	if(not (curr in tree)):        
+		for j in i['request']['headers']:
+		    if(j['name'] == 'Referer' ):
+		    	tree[curr] =  j['value']
+    return tree
+
+
+
+print buildTree (sys.argv[1])
