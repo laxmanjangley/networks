@@ -2,7 +2,8 @@ import os
 import parser as p
 import sys
 #tree {node : parent} (tree I)
-tree = p.buildTree (sys.argv[1])
+tree , pageloadTime= p.buildTree (sys.argv[1])
+# print tree
 #connection ID :  parent
 cTree = {}
 #connectionID : list children
@@ -20,13 +21,16 @@ def connTree (ip):
 		#print com
 		f = open(fileName + str(file) , 'r')
 		line = f.readline()
+		lis = line.split()
+		#print 'a'
 		while (line != ''):
-			lis = line.split()
-			conId = int(lis[0])
-			if(not(conId in cTree)):
-				cTree [conId] = ip[i]
-				nodeTree[conId] = []
+			#print 2
 			if (len(lis) == 2):
+				conId = int(lis[0])
+				# print 'here'
+				if(not(conId in cTree)):
+					cTree [conId] = ip[i]
+					nodeTree[conId] = []
 				if(not(lis[1] in nodeTree[conId])):
 					nodeTree[conId].append(lis[1])
 			line = f.readline()
@@ -36,5 +40,6 @@ def connTree (ip):
 def reset():
 	cTree = {}
 	nodeTree={}
-	
+
 connTree (p.ip)
+# print nodeTree
