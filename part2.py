@@ -19,7 +19,7 @@ endTime = {}
 
 #connectionID : list children
 # 3 c iii 1
-def connTree (ip):
+def connTree (ip ,pcap):
 	global cTree
 	global tree
 	global pageloadTime
@@ -33,9 +33,11 @@ def connTree (ip):
 	file = 0
 	fileName = 'connectionData/'
 	commandTail = ' && http " -T fields -e tcp.stream  -e http.request.full_uri -e http.host >'
-	commandHead = 'tshark -r nytimes.pcap -Y "ip.dst == '
+	commandHead = 'tshark -r '
+	#nytimes.pcap
+	ca1 = ' -Y "ip.dst == '
 	for i in ip:
-		com = commandHead + i + commandTail + fileName + str(file)
+		com = commandHead +pcap + ca1+ i + commandTail + fileName + str(file)
 		line = os.popen(com , "r")
 		#print line
 		#print com
@@ -96,7 +98,7 @@ def connTree (ip):
 		file =file + 1
 	# print len(cTree) , len(nodeTree) , len(connect) , len(wait) , len(receive) , len(startTime) , len(endTime)
 
-def reset(a):
+def reset(a,b):
 	global cTree
 	global tree
 	global pageloadTime
@@ -119,7 +121,7 @@ def reset(a):
 	# p.reset()
 	tree , pageloadTime = p.buildTree (a)
 	# print len(tree) , 'tree' , len (p.size) , len(p.ip)
-	connTree (p.ip)
+	connTree (p.ip , b)
 # reset(sys.argv[1])
 # reset()
 # print len(cTree) , len(nodeTree) , len(connect) , len(wait) , len(receive) , len(startTime) , len(endTime)

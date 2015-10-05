@@ -52,7 +52,8 @@ def buildTree (a):
 				if(j['name'] == 'Referer'):
 					tree[curr] = j['value']
 					# if(not(i['serverIPAddress'] in ip)):
-					ip[i['serverIPAddress']] = j['value']
+					if 'serverIPAddress' in i:
+						ip[i['serverIPAddress']] = j['value']
 						# ipReqUrl[i[server]] = [curr]
 					# else:
 					# 	ip[i['serverIPAddress']].append( j['value'])
