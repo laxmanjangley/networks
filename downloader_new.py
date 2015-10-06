@@ -17,9 +17,10 @@ class connection (threading.Thread):
         self.threadID = threadID
         self.objectstaken = 0
         self.name = name
+        self.connect = connect
         self.socke = sock.mysocket()
-        self.socke.connect(connect)
-    def run(self,request):
+        self.socke.connect(connect[0],connect[1])
+    def run(self,request,HOST,path):
         self.objectstaken +=1
         self.socke.mysend(request)
         result = self.socke.myreceive()
@@ -53,12 +54,12 @@ def buildmap(b):
     entry = b['log']['entries']
     D={}
     for i in entry:
-		req=i['request']
-		url=urlparse(req['url'])
-		HOST=url.netloc
+        req=i['request']
+        url=urlparse(req['url'])
+        HOST=url.netloc
         key='connection'
-        if key in k:
-        	PORT=int(k['connection'])
+        if key in i:
+        	PORT=int(i['connection'])
         else:
         	PORT=80
         if not ((HOST,PORT) in D):
@@ -77,8 +78,9 @@ def downloader(a,connections,objects):
         T[i] = []
         for k in range(0,connections):
             j+=1
-            T[i].append(connection(j,"thread "+str(j)),i)
-        for e in m[i]:
+            T[i].append(connection(j,"thread "+str(j),i))
+        M = m[i]
+        for e in range(0,len(M)):
             I=m[i][e]
             req=I['request']
             url=urlparse(req['url'])
@@ -86,13 +88,16 @@ def downloader(a,connections,objects):
             path=url.path
             request=req['method']+"   "+path+" " + req['httpVersion']+"\r\n"
             for head in req['headers']:
-                request+=head['name']+":"+head['value']+CRLF
-            for t in T[i]:
-                if (not(isAlive(T[i][t])) and (T[i][t].objectstaken<objects)):
-                    T[i][t].start(request)
+                if (head['name'] == 'Host'):
+                    request+=head['name']+":"+head['value']+"\r\n"
+                else:
+                    request+=head['name']+":"+head['value']+CRLF
+            for t in range(0,len(T[i])):
+                if (not(T[i][t].isAlive()) and (T[i][t].objectstaken<objects)):
+                    T[i][t].run(request,HOST,path)
     for i in T:
-        for j in T[i]:
-            T[i][j].socke.close()
+        for j in range(0,len(T[i])):
+            T[i][j].socke.sock.close()
 
 
 downloader(sys.argv[1],int(sys.argv[2]),int(sys.argv[3]))
