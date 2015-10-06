@@ -1,0 +1,4 @@
+Average achieved goodput = 0.195652173913
+ No , browser didnt utilize resources efficiently,
+ as we can say by analyzing :
+		 total average goodput < overall max goodput 

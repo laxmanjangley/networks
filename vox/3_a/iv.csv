@@ -1,0 +1,19 @@
+Domain , noOfTcpConnection , 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14 , 15 , 16 , 17 , 18 , 19
+pixel.quantserve.com , 1 , 1
+ping.chartbeat.net , 1 , 2
+ajax.googleapis.com , 2 , 2 , 1
+pki.google.com , 1 , 1
+edge.quantserve.com , 1 , 1
+cdn3.vox-cdn.com , 6 , 1 , 1 , 2 , 2 , 2 , 1
+cdn2.vox-cdn.com , 5 , 3 , 1 , 1 , 3 , 1
+cdn1.vox-cdn.com , 5 , 2 , 1 , 1 , 1 , 1
+www.vox.com , 7 , 2 , 1 , 1 , 1 , 1 , 1 , 1
+cdn.jsdelivr.net , 1 , 1
+b.scorecardresearch.com , 1 , 3
+static.chartbeat.com , 1 , 1
+www.google-analytics.com , 1 , 2
+ea-cdn.voxmedia.com , 4 , 1 , 1 , 1 , 1
+cdn0.vox-cdn.com , 7 , 6 , 1 , 1 , 2 , 3 , 2 , 1
+cdnjs.cloudflare.com , 1 , 2
+www.youtube.com , 1 , 1
+ox-d.sbnation.com , 2 , 1 , 1

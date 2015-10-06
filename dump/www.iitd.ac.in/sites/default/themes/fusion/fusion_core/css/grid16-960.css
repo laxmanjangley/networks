@@ -1,3 +1,12 @@
+HTTP/1.1 200 OK
+Date: Mon, 05 Oct 2015 19:29:17 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Last-Modified: Wed, 02 Dec 2009 00:47:46 GMT
+ETag: "1a2acb-5e4-479b4391b3080"
+Accept-Ranges: bytes
+Content-Length: 1508
+Content-Type: text/css
+
 /* $Id: grid16-960.css,v 1.1.2.4 2009/12/02 00:47:46 sociotech Exp $ */
 
 /* Layout - 16 column grid, 960px fixed width, 20px gutters
@@ -53,3 +62,21 @@ body,
 div.full-width {
   min-width: 960px;
 }
+HTTP/1.1 400 Bad Request
+Date: Mon, 05 Oct 2015 19:29:17 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Vary: Accept-Encoding
+Content-Length: 354
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1 Server at www.iitd.ernet.in Port 80</address>
+</body></html>

@@ -1,0 +1,19 @@
+Domain , noOfTCPsOpened , simultanousConnectionOpened 
+pixel.quantserve.com,1,1
+ping.chartbeat.net,1,1
+ajax.googleapis.com,2,1
+pki.google.com,1,1
+edge.quantserve.com,1,1
+cdn3.vox-cdn.com,6,6
+cdn2.vox-cdn.com,5,5
+cdn1.vox-cdn.com,5,5
+www.vox.com,7,7
+cdn.jsdelivr.net,1,1
+b.scorecardresearch.com,1,1
+static.chartbeat.com,1,1
+www.google-analytics.com,1,1
+ea-cdn.voxmedia.com,4,4
+cdn0.vox-cdn.com,7,7
+cdnjs.cloudflare.com,1,1
+www.youtube.com,1,1
+ox-d.sbnation.com,2,2

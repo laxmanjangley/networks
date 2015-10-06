@@ -1,0 +1,7 @@
+total types = 6
+.css
+.js
+.jpg
+.png
+.woff
+.gif

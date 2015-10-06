@@ -155,9 +155,9 @@ totalAvgput /= y
 f2 = open(sys.argv[3]+'/'+'3_c/X_XI' , "w")
 f2.write('Average achieved goodput = '+ str(totalAvgput) + '\n')
 if(totalAvgput < maxgp):
-    f2.write( ' No , browser didnt utilised resources efficiently,\n as we can say by analyzing :\n\t\t total average goodput < overall max goodput ')
+    f2.write( ' No , browser didnt utilize resources efficiently,\n as we can say by analyzing :\n\t\t total average goodput < overall max goodput ')
 else:
-    f2.write( ' Yes , browser didnt utilised resources efficiently,\n as we can say by analyzing :\n\t\t total average goodput = overall max goodput ')
+    f2.write( ' Yes , browser didnt utilize resources efficiently,\n as we can say by analyzing :\n\t\t total average goodput = overall max goodput ')
 f2.close()
 
 

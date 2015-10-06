@@ -1,3 +1,12 @@
+HTTP/1.1 200 OK
+Date: Mon, 05 Oct 2015 19:29:17 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Last-Modified: Mon, 08 Jun 2009 11:50:42 GMT
+ETag: "1a1b91-edc-46bd4da076880"
+Accept-Ranges: bytes
+Content-Length: 3804
+Content-Type: text/css
+
 /* Force from/to dates to float using inline-block, where it works, otherwise inline. */
 .container-inline-date {
   width:auto;
@@ -204,3 +213,21 @@ div.date-calendar-day span.year {
   font-size: .9em;
   padding: 2px;
 }
+HTTP/1.1 400 Bad Request
+Date: Mon, 05 Oct 2015 19:29:17 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Vary: Accept-Encoding
+Content-Length: 354
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1 Server at www.iitd.ernet.in Port 80</address>
+</body></html>

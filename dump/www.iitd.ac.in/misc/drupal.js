@@ -1,3 +1,12 @@
+HTTP/1.1 200 OK
+Date: Mon, 05 Oct 2015 19:29:17 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Last-Modified: Tue, 21 Jul 2009 08:59:10 GMT
+ETag: "1a2c31-266a-46f3377c11380"
+Accept-Ranges: bytes
+Content-Length: 9834
+Content-Type: application/javascript
+
 // $Id: drupal.js,v 1.41.2.4 2009/07/21 08:59:10 goba Exp $
 
 var Drupal = Drupal || { 'settings': {}, 'behaviors': {}, 'themes': {}, 'locale': {} };
@@ -295,3 +304,21 @@ Drupal.theme.prototype = {
     return '<em>' + Drupal.checkPlain(str) + '</em>';
   }
 };
+HTTP/1.1 400 Bad Request
+Date: Mon, 05 Oct 2015 19:29:17 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Vary: Accept-Encoding
+Content-Length: 354
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1 Server at www.iitd.ernet.in Port 80</address>
+</body></html>

@@ -1,11 +1,6 @@
 import socket
 
-MSGLEN = 1000000
-
 class mysocket:
-    '''demonstration class only
-      - coded for clarity, not efficiency
-    '''
 
     def __init__(self, sock=None):
         if sock is None:
@@ -18,7 +13,6 @@ class mysocket:
         self.sock.connect((host, port))
 
     def mysend(self, msg):
-        totalsent = 0
         sent = self.sock.send(msg)
 
     def myreceive(self):
@@ -28,6 +22,3 @@ class mysocket:
             result+=data
             data = self.sock.recv(1024)
         return result
-
-    def cls(self):
-        self.sock.shutdown(socket.SHUT_RDWR)

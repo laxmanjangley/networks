@@ -1,3 +1,12 @@
+HTTP/1.1 200 OK
+Date: Mon, 05 Oct 2015 19:29:17 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Last-Modified: Wed, 19 Aug 2009 04:28:08 GMT
+ETag: "1a2af8-d21-471770fdc8600"
+Accept-Ranges: bytes
+Content-Length: 3361
+Content-Type: application/javascript
+
 // $Id: supersubs.js,v 1.1 2009/08/19 04:28:07 sociotech Exp $
 
 /*
@@ -89,3 +98,21 @@
 	};
 	
 })(jQuery); // plugin code ends
+HTTP/1.1 400 Bad Request
+Date: Mon, 05 Oct 2015 19:29:17 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Vary: Accept-Encoding
+Content-Length: 354
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>400 Bad Request</title>
+</head><body>
+<h1>Bad Request</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1 Server at www.iitd.ernet.in Port 80</address>
+</body></html>
