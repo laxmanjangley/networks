@@ -77,9 +77,7 @@ def threadfunction(thread,val,objects):
             request=req['method']+"   "+path+" " + req['httpVersion']+"\r\n"
             for head in req['headers']:
                 request+=head['name']+":"+head['value']+CRLF
-            #socke.mysend(request)
-            g=open("request",'w')
-            g.write(request+"\n")
+            socke.mysend(request)
             result = socke.myreceive()
             filename="dump/"+HOST+path
             if path == "/":
