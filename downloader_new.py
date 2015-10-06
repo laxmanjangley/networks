@@ -17,28 +17,33 @@ class connection (threading.Thread):
         self.threadID = threadID
         self.objectstaken = 0
         self.name = name
+        self.connect = connect
         self.socke = sock.mysocket()
-        self.socke.connect(connect)
-    def run(self,request):
+        self.socke.connect(connect[0],connect[1])
+    def run(self,request,HOST,path):
         self.objectstaken +=1
         self.socke.mysend(request)
         result = self.socke.myreceive()
         filename="dump/"+HOST+path
-        if path == "/":
+        if filename[len(filename)-1] == '/':
             filename = "dump/"+HOST+".html"
         if not os.path.exists(os.path.dirname(filename)):
             os.makedirs(os.path.dirname(filename))
+        print filename
         f=open(filename,'w')
         f.write(result)
         pattern = '[C][o][n][t][e][n][t][-][T][y][p][e][:].*\r\n\r\n'
         x = re.split(pattern,result)
+      #  print len(x)
+       # print  "jdjdjdjdjd\n"
         if(len(x) == 1):
             result=x[0]
         else :
             result=x[1]
-        print result.split("HTTP/1.")[0]
-        f.write(result.split("HTTP/1.")[0])
+        f.write(result)
         f.close()
+        if(self.objectstaken==int(sys.argv[3])):
+            self.objectstaken = 0
 
 CRLF = "\r\n\r\n"
 
@@ -53,12 +58,12 @@ def buildmap(b):
     entry = b['log']['entries']
     D={}
     for i in entry:
-		req=i['request']
-		url=urlparse(req['url'])
-		HOST=url.netloc
+        req=i['request']
+        url=urlparse(req['url'])
+        HOST=url.netloc
         key='connection'
-        if key in k:
-        	PORT=int(k['connection'])
+        if key in i:
+        	PORT=int(i['connection'])
         else:
         	PORT=80
         if not ((HOST,PORT) in D):
@@ -77,22 +82,40 @@ def downloader(a,connections,objects):
         T[i] = []
         for k in range(0,connections):
             j+=1
-            T[i].append(connection(j,"thread "+str(j)),i)
-        for e in m[i]:
+            T[i].append(connection(j,"thread "+str(j),i))
+        M = m[i]
+        for e in range(0,len(M)):
             I=m[i][e]
             req=I['request']
             url=urlparse(req['url'])
             HOST=url.netloc
+           # print HOST,I['connection']
             path=url.path
-            request=req['method']+"   "+path+" " + req['httpVersion']+"\r\n"
+           # print path
+            request=req['method']+"   "+path+" " + req['httpVersion']+"\n"
             for head in req['headers']:
-                request+=head['name']+":"+head['value']+CRLF
-            for t in T[i]:
-                if (not(isAlive(T[i][t])) and (T[i][t].objectstaken<objects)):
-                    T[i][t].start(request)
+                if (head['name'] == 'Host'):
+                    request+=head['name']+":"+head['value']+"\n\n"
+                
+                # else:
+                #     request+=head['name']+":"+head['value']+"\n\n"
+            if(I['response']['status']==200 and I['response']['content']):
+                if e==0:
+                    l = open("request",'w')
+                    l.write(request)
+                   # l.write(I['serverIPAddress'])
+                    l.close()    
+                for t in range(0,len(T[i])):
+                    if (not(T[i][t].isAlive()) and (T[i][t].objectstaken<objects)):
+                        T[i][t].run(request,HOST,path)
+                        t = len(T[i])
+                    else:
+                        time.sleep(5)
+                        t=0
+
     for i in T:
-        for j in T[i]:
-            T[i][j].socke.close()
+        for j in range(0,len(T[i])):
+            T[i][j].socke.sock.close()
 
 
 downloader(sys.argv[1],int(sys.argv[2]),int(sys.argv[3]))
