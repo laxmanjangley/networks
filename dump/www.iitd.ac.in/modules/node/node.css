@@ -1,0 +1,97 @@
+HTTP/1.1 200 OK
+Date: Tue, 06 Oct 2015 18:18:21 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Last-Modified: Fri, 25 Jan 2008 21:21:44 GMT
+ETag: "1a2b97-2e4-444928b8c8a00"
+Accept-Ranges: bytes
+Content-Length: 740
+Content-Type: text/css
+
+/* $Id: node.css,v 1.5 2008/01/25 21:21:44 goba Exp $ */
+
+.node-unpublished {
+  background-color: #fff4f4;
+}
+.preview .node {
+  background-color: #ffffea;
+}
+#node-admin-filter ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+#node-admin-buttons {
+  float: left; /* LTR */
+  margin-left: 0.5em; /* LTR */
+  clear: right; /* LTR */
+}
+td.revision-current {
+  background: #ffc;
+}
+.node-form .form-text {
+  display: block;
+  width: 95%;
+}
+.node-form .container-inline .form-text {
+  display: inline;
+  width: auto;
+}
+.node-form .standard {
+  clear: both;
+}
+.node-form textarea {
+  display: block;
+  width: 95%;
+}
+.node-form .attachments fieldset {
+  float: none;
+  display: block;
+}
+.terms-inline {
+  display: inline;
+}
+/* $Id: node.css,v 1.5 2008/01/25 21:21:44 goba Exp $ */
+
+.node-unpublished {
+  background-color: #fff4f4;
+}
+.preview .node {
+  background-color: #ffffea;
+}
+#node-admin-filter ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+#node-admin-buttons {
+  float: left; /* LTR */
+  margin-left: 0.5em; /* LTR */
+  clear: right; /* LTR */
+}
+td.revision-current {
+  background: #ffc;
+}
+.node-form .form-text {
+  display: block;
+  width: 95%;
+}
+.node-form .container-inline .form-text {
+  display: inline;
+  width: auto;
+}
+.node-form .standard {
+  clear: both;
+}
+.node-form textarea {
+  display: block;
+  width: 95%;
+}
+.node-form .attachments fieldset {
+  float: none;
+  display: block;
+}
+.terms-inline {
+  display: inline;
+}

@@ -1,0 +1,115 @@
+HTTP/1.1 200 OK
+Date: Tue, 06 Oct 2015 18:18:36 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Last-Modified: Tue, 02 Oct 2007 12:10:40 GMT
+ETag: "1a2be5-2f5-43b817107d000"
+Accept-Ranges: bytes
+Content-Length: 757
+Content-Type: text/css
+
+/* $Id: defaults.css,v 1.5 2007/10/02 12:10:40 dries Exp $ */
+
+/*
+** HTML elements
+*/
+fieldset {
+  margin-bottom: 1em;
+  padding: .5em;
+}
+form {
+  margin: 0;
+  padding: 0;
+}
+hr {
+  height: 1px;
+  border: 1px solid gray;
+}
+img {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+}
+th {
+  text-align: left; /* LTR */
+  padding-right: 1em; /* LTR */
+  border-bottom: 3px solid #ccc;
+}
+
+/*
+** Markup free clearing
+** Details: http://www.positioniseverything.net/easyclearing.html
+*/
+.clear-block:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clear-block {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clear-block {
+  height: 1%;
+}
+.clear-block {
+  display: block;
+}
+/* End hide from IE-mac */
+/* $Id: defaults.css,v 1.5 2007/10/02 12:10:40 dries Exp $ */
+
+/*
+** HTML elements
+*/
+fieldset {
+  margin-bottom: 1em;
+  padding: .5em;
+}
+form {
+  margin: 0;
+  padding: 0;
+}
+hr {
+  height: 1px;
+  border: 1px solid gray;
+}
+img {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+}
+th {
+  text-align: left; /* LTR */
+  padding-right: 1em; /* LTR */
+  border-bottom: 3px solid #ccc;
+}
+
+/*
+** Markup free clearing
+** Details: http://www.positioniseverything.net/easyclearing.html
+*/
+.clear-block:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clear-block {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clear-block {
+  height: 1%;
+}
+.clear-block {
+  display: block;
+}
+/* End hide from IE-mac */

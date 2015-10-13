@@ -1,0 +1,25 @@
+HTTP/1.1 200 OK
+Date: Tue, 06 Oct 2015 18:21:56 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Last-Modified: Sat, 14 Mar 2009 18:55:20 GMT
+ETag: "1a18de-a6-46518c2489600"
+Accept-Ranges: bytes
+Content-Length: 166
+Content-Type: text/css
+
+/* $Id: fieldgroup.css,v 1.2.2.2 2009/03/14 18:55:20 yched Exp $ */
+
+div.fieldgroup {
+  margin:.5em 0 1em 0;
+}
+div.fieldgroup .content {
+  padding-left:1em;/*LTR*/
+}
+/* $Id: fieldgroup.css,v 1.2.2.2 2009/03/14 18:55:20 yched Exp $ */
+
+div.fieldgroup {
+  margin:.5em 0 1em 0;
+}
+div.fieldgroup .content {
+  padding-left:1em;/*LTR*/
+}

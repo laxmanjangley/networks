@@ -1,0 +1,113 @@
+HTTP/1.1 200 OK
+Date: Tue, 06 Oct 2015 18:21:11 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Last-Modified: Fri, 25 Feb 2011 02:07:16 GMT
+ETag: "1a1c5f-491-49d11ca025d00"
+Accept-Ranges: bytes
+Content-Length: 1169
+Content-Type: text/css
+
+
+/**
+ * @file dhtml_menu.css
+ * Static stylesheet rules to be applied to DHTML Menu markup.
+ */
+
+/*
+ * Cloned leaves are small and emphasized with italics.
+ */
+li.dhtml-menu-cloned-leaf {
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+/*
+ * Menus that are initially collapsed must be hidden statically.
+ * Otherwise, they will show up while the page renders, until JS runs.
+ */
+li.dhtml-menu.start-collapsed ul {
+  display: none;
+}
+
+/*
+ * When using open-only menus, expanded links are italicized
+ * to show that they are now static.
+ */ 
+li.dhtml-menu-open > a {
+  font-style: italic;
+}
+
+/*
+ * When using bullet-icon expansion, make the invisible link as large 
+ * as the bullet icon (16x16). It will be positioned by Javascript, respecting 
+ * text direction. Therefore no positioning code is required here.
+ */
+a.dhtml-menu-icon {
+  position: relative;
+  float: left;
+  width: 16px;
+  height: 16px;
+}
+
+/*
+ * Provide large and visible folder icons for easy clicking.
+ */
+li.dhtml-folder.expanded {
+  list-style-image: url("images/folder-open-white.png") !important;
+}
+li.dhtml-folder.collapsed {
+  list-style-image: url("images/folder-closed-white.png") !important;
+}
+
+
+/**
+ * @file dhtml_menu.css
+ * Static stylesheet rules to be applied to DHTML Menu markup.
+ */
+
+/*
+ * Cloned leaves are small and emphasized with italics.
+ */
+li.dhtml-menu-cloned-leaf {
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+/*
+ * Menus that are initially collapsed must be hidden statically.
+ * Otherwise, they will show up while the page renders, until JS runs.
+ */
+li.dhtml-menu.start-collapsed ul {
+  display: none;
+}
+
+/*
+ * When using open-only menus, expanded links are italicized
+ * to show that they are now static.
+ */ 
+li.dhtml-menu-open > a {
+  font-style: italic;
+}
+
+/*
+ * When using bullet-icon expansion, make the invisible link as large 
+ * as the bullet icon (16x16). It will be positioned by Javascript, respecting 
+ * text direction. Therefore no positioning code is required here.
+ */
+a.dhtml-menu-icon {
+  position: relative;
+  float: left;
+  width: 16px;
+  height: 16px;
+}
+
+/*
+ * Provide large and visible folder icons for easy clicking.
+ */
+li.dhtml-folder.expanded {
+  list-style-image: url("images/folder-open-white.png") !important;
+}
+li.dhtml-folder.collapsed {
+  list-style-image: url("images/folder-closed-white.png") !important;
+}
+

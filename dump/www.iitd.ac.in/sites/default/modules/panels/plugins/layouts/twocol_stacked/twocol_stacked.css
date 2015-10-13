@@ -1,0 +1,95 @@
+HTTP/1.1 200 OK
+Date: Tue, 06 Oct 2015 18:22:26 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Last-Modified: Thu, 26 May 2011 17:24:05 GMT
+ETag: "1a2672-34b-4a4311684d740"
+Accept-Ranges: bytes
+Content-Length: 843
+Content-Type: text/css
+
+/* $Id: twocol_stacked.css,v 1.1.2.1 2008/12/16 21:27:59 merlinofchaos Exp $ */
+
+.panel-2col-stacked { 
+/*  overflow: hidden;  */
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.panel-2col-stacked .panel-col-top,
+.panel-2col-stacked .panel-col-bottom { 
+  width: 99.9%; 
+  clear: both;
+}
+
+.panel-2col-stacked .panel-col-top .inside {
+/* Changed by bharat on 26/05/2011 margin-bottom: .5em to 1.5em */
+  margin-bottom: 1.5em;
+}
+
+.panel-2col-stacked .panel-col-first { 
+  float: left; 
+  width: 50%; 
+}
+* html .panel-2col-stacked .panel-col-first {
+  width: 49.9%;
+}
+
+.panel-2col-stacked .panel-col-first .inside { 
+  margin: 0 .5em 1em 0;
+}
+
+.panel-2col-stacked .panel-col-last { 
+  float: left; 
+  width: 49.9%; 
+}
+
+.panel-2col-stacked .panel-col-last .inside { 
+  margin: 0 0 1em .5em;
+}
+
+.panel-2col-stacked .panel-separator {
+  margin: 0 0 1em 0;
+}
+/* $Id: twocol_stacked.css,v 1.1.2.1 2008/12/16 21:27:59 merlinofchaos Exp $ */
+
+.panel-2col-stacked { 
+/*  overflow: hidden;  */
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.panel-2col-stacked .panel-col-top,
+.panel-2col-stacked .panel-col-bottom { 
+  width: 99.9%; 
+  clear: both;
+}
+
+.panel-2col-stacked .panel-col-top .inside {
+/* Changed by bharat on 26/05/2011 margin-bottom: .5em to 1.5em */
+  margin-bottom: 1.5em;
+}
+
+.panel-2col-stacked .panel-col-first { 
+  float: left; 
+  width: 50%; 
+}
+* html .panel-2col-stacked .panel-col-first {
+  width: 49.9%;
+}
+
+.panel-2col-stacked .panel-col-first .inside { 
+  margin: 0 .5em 1em 0;
+}
+
+.panel-2col-stacked .panel-col-last { 
+  float: left; 
+  width: 49.9%; 
+}
+
+.panel-2col-stacked .panel-col-last .inside { 
+  margin: 0 0 1em .5em;
+}
+
+.panel-2col-stacked .panel-separator {
+  margin: 0 0 1em 0;
+}

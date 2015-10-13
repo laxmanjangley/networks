@@ -1,0 +1,25 @@
+HTTP/1.1 200 OK
+Date: Tue, 06 Oct 2015 18:20:56 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Last-Modified: Fri, 13 Aug 2010 19:02:54 GMT
+ETag: "1a1bca-99-48db9214cf380"
+Accept-Ranges: bytes
+Content-Length: 153
+Content-Type: text/css
+
+/* TimeEntry styles */
+.timeEntry_control {
+	vertical-align: middle;
+	margin-left: 2px;
+}
+* html .timeEntry_control { /* IE only */
+	margin-top: -4px;
+}
+/* TimeEntry styles */
+.timeEntry_control {
+	vertical-align: middle;
+	margin-left: 2px;
+}
+* html .timeEntry_control { /* IE only */
+	margin-top: -4px;
+}

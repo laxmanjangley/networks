@@ -94,21 +94,21 @@ def get(a,objectsPerConn):
 	z = int(len(entry))/(objectsPerConn)
 	i=0
 	while i<z:
-		socke = sock.mysocket()
-		socke.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 		j=0
 		while j<objectsPerConn:
-			print "cool ",i,j
+			socke = sock.mysocket()
+			socke.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 			k = entry[i*objectsPerConn+j]
 			req=k['request']
 			url=urlparse(req['url'])
 			HOST=url.netloc
 			path=url.path
-			request=req['method']+"   "+path+" " + req['httpVersion']+"\r\n"
+			request=req['method']+"   "+path+" " + req['httpVersion']+"\n"
 			#request='GET / HTTP /1.1'+ CRLF
 			#for adding headers to request .
 			for head in req['headers']:
-				request+=head['name']+":"+head['value']+CRLF
+				if(head['name']=='Host'):
+					request+=head['name']+":"+head['value']+'\n\n'
 			key='connection'
 			if key in k:
 				PORT=int(k['connection'])
@@ -116,7 +116,6 @@ def get(a,objectsPerConn):
 				PORT=80
 			socke.connect(HOST,PORT)
 			socke.mysend(request)
-			print "bhenchod\n"
 			result = socke.myreceive()
 			filename="dump/"+HOST+path
 			if path == "/":
